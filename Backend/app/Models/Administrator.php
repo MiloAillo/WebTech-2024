@@ -2,18 +2,17 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class Administrator extends Authenticatable
 {
     use HasApiTokens;
-
+    
     protected $fillable = [
         "username",
         "password",
-        "role",
         "last_login_at",
         "created_at",
         "updated_at"

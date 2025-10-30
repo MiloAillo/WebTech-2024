@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string("username");
             $table->string("password");
-            $table->timestamp("last_login_at");
+            $table->timestamp("last_login_at")->nullable();
         });
     }
 

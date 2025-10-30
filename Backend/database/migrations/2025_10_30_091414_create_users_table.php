@@ -16,8 +16,9 @@ return new class extends Migration
             $table->timestamps();
             $table->string("username");
             $table->string("password");
-            $table->timestamp("last_login_at");
-            $table->string("delete_reason");
+            $table->enum("role", ["user", "dev"]);
+            $table->timestamp("last_login_at")->nullable();
+            $table->string("delete_reason")->nullable();
         });
     }
 
