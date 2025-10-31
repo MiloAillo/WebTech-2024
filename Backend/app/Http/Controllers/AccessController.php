@@ -138,4 +138,11 @@ class AccessController extends Controller
             ]);
         }
     }
+
+    function logout(Request $request) {
+        $request->user()->currentAccessToken()->delete();
+        return response()->json([
+            "status" => "success"
+        ], 200);
+    }
 }
